@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Nithish Kumar</title>
+    <meta name="description"
+        content="Learn more about M Nithish Kumar — Fullstack Developer, networking enthusiast and cybersecurity learner.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="loader">
+        <div class="loader-ring"></div>
+    </div>
+
+    <!-- ── HEADER ── -->
+    <header class="header" id="header">
+        <a href="../index.html" class="logo" style="text-decoration:none;">NK<span>.</span></a>
+        <nav class="navbar" id="navbar">
+            <a href="../index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+            <a href="contact.html" class="nav-cta">Hire Me ✦</a>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </header>
+
+    <!-- ── ABOUT HERO ── -->
+    <section class="section" style="padding-top: 140px;">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Image Column -->
+                <div class="about-image-col reveal">
+                    <div class="about-img-frame">
+                        <img src="../img/WhatsApp Image 2025-12-09 at 8.07.12 PM.jpeg" alt="M Nithish Kumar">
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="about-content reveal reveal-delay-2">
+                    <span class="tag">About Me</span>
+                    <h2>Passionate Developer &<br><span class="gradient-text">Tech Enthusiast</span></h2>
+                    <p>
+                        Hi! I'm <strong>M Nithish Kumar</strong>, a fullstack web developer from <strong>Cuddalore,
+                            Tamil Nadu</strong>.
+                        I have a strong passion for building digital experiences that are fast, secure, and beautifully
+                        designed.
+                    </p>
+                    <p>
+                        I love working on both the <em>creative side</em> (UI/UX, animations, responsive layouts) and
+                        the
+                        <em>technical side</em> (databases, APIs, networking). My background spans frontend development
+                        all the
+                        way through to core networking concepts and cybersecurity fundamentals.
+                    </p>
+                    <p>
+                        My goal is to grow into a complete full-stack engineer with a strong security mindset,
+                        contributing to
+                        impactful tech solutions and real-world projects.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">🎓 Bharathidasan University — Multiple Distinctions</div>
+                        <div class="highlight-item">🏆 1st Place — Ads Making Challenge (Tech Extra, SJC)</div>
+                        <div class="highlight-item">🥈 2nd Place — Hackathon & Web Dev (Tech Extra, SJC)</div>
+                        <div class="highlight-item">📍 Cuddalore, Tamil Nadu, India</div>
+                        <div class="highlight-item">📧 nithishofficial09@gmail.com</div>
+                    </div>
+                    <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="resume.html" class="btn btn-primary">📄 My Resume</a>
+                        <a href="contact.html" class="btn btn-outline">✉ Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CERTIFICATES ── -->
+    <section class="section projects-bg" id="certificates">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="tag">Achievements</span>
+                <div class="section-line">
+                    <div class="section-dot"></div>
+                </div>
+                <h2>Certificates & <span class="gradient-text">Awards</span></h2>
+                <p>Academic excellence and competitive achievements that define my learning journey.</p>
+            </div>
+
+            <div class="certs-grid" id="certsContainer"></div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">NK.</div>
+            <p>Fullstack Developer · Networking Enthusiast · Cybersecurity Learner</p>
+            <div class="footer-socials">
+                <a href="https://github.com/" target="_blank" class="footer-social-link">🐙</a>
+                <a href="https://linkedin.com/" target="_blank" class="footer-social-link">💼</a>
+                <a href="https://instagram.com/" target="_blank" class="footer-social-link">📷</a>
+                <a href="mailto:nithishofficial09@gmail.com" class="footer-social-link">✉️</a>
+            </div>
+            <nav class="footer-nav">
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="footer-bottom">
+                <p>Made with <span>♥</span> by M Nithish Kumar &nbsp;·&nbsp; © 2025 All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page Loader
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => { loader.style.opacity = '0'; setTimeout(() => loader.remove(), 500); }, 300);
+        });
+
+        // Mobile Menu
+        function toggleMenu() { document.getElementById('navbar').classList.toggle('open'); }
+
+        // Scroll Reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Header shadow
+        window.addEventListener('scroll', () => {
+            document.getElementById('header').style.boxShadow = window.scrollY > 10 ? '0 4px 30px rgba(0,0,0,0.4)' : '';
+        });
+
+        // ── Certificates Data ──
+        const certi = [
+            { icon: '🖥️', name: 'Office Automation', university: 'Bharathidasan University', duration: '10 months', grade: 'First Class with Distinction', type: 'gold' },
+            { icon: '⌨️', name: 'C Programming', university: 'Bharathidasan University', duration: '10 months', grade: 'First Class with Distinction', type: 'gold' },
+            { icon: '🧠', name: 'Programming Techniques', university: 'Bharathidasan University', duration: '10 months', grade: 'First Class with Exemplary', type: 'gold' },
+            { icon: '💡', name: 'Computer Basics', university: 'Bharathidasan University', duration: '10 months', grade: 'First Class with Distinction', type: 'gold' },
+            { icon: '🔐', name: 'Networking & Cybersecurity', university: 'SJC', duration: '15 days', type: 'silver' },
+            { icon: '🎬', name: 'Ads Making', university: 'SJC — Tech Extra', place: '🥇 1st Place', type: 'event' },
+            { icon: '💻', name: 'Hackathon', university: 'SJC — Tech Extra', place: '🥈 2nd Place', type: 'event' },
+            { icon: '🌐', name: 'Web Development', university: 'SJC — Tech Extra', place: '🥈 2nd Place', type: 'event' },
+        ];
+
+        const container = document.getElementById('certsContainer');
+        certi.forEach((item, i) => {
+            const delay = (i % 4) * 0.1;
+            let badge = '';
+            if (item.grade) badge = `<span class="cert-badge badge-gold">${item.grade}</span>`;
+            else if (item.place) badge = `<span class="cert-badge badge-event">${item.place}</span>`;
+            else badge = `<span class="cert-badge badge-silver">Completed</span>`;
+
+            container.innerHTML += `
+      <div class="cert-card reveal" style="transition-delay:${delay}s">
+        <div class="cert-icon">${item.icon}</div>
+        <h3>${item.name}</h3>
+        <div class="cert-uni">${item.university}</div>
+        ${item.duration ? `<div class="cert-detail">⏱ ${item.duration}</div>` : ''}
+        ${badge}
+      </div>`;
+        });
+
+        // Re-observe newly added elements
+        document.querySelectorAll('.cert-card').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
